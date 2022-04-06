@@ -1,4 +1,4 @@
-package lv.javaguru.demo;
+package lv.lesson1;
 
 import java.util.Random;
 

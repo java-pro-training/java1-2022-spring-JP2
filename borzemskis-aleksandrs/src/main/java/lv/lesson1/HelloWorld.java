@@ -1,4 +1,4 @@
-package lv.javaguru.demo;
+package lv.lesson1;
 
 public class HelloWorld {
     public static void main(String[] args) {
