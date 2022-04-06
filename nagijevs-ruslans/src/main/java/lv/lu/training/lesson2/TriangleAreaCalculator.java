@@ -13,10 +13,10 @@ public class TriangleAreaCalculator {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Ievadiet trijstūra pamatu: ");
-        int pamats = scan.nextInt();
+        double pamats = scan.nextInt();
         System.out.print("Ievadiet trijstūra augstumu: ");
         int augstums = scan.nextInt();
-        int laukums = (pamats * augstums)/2;
+        double laukums = (pamats * augstums)/2;
         System.out.println("Trijstūra laukums ir " + laukums);
 
     }
