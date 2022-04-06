@@ -13,10 +13,8 @@ public class HelloWorld {
         int side2 = 15;
         int side3 = 13;
         int side4 = 25;
-        int result = side1;
-        result = result + side2;
-        result +=side3;
-        result +=side4;
+        int result = side1 + side2 + side3 + side4;
+
         System.out.println("perimetrs: " + result);
 
 
