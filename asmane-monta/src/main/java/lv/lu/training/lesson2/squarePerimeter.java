@@ -1,6 +1,6 @@
 package lv.lu.training.lesson2;
 
-public class square {
+public class squarePerimeter {
 
     public static void main(String[] args) {
         int side1 = 10;
