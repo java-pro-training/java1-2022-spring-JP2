@@ -12,7 +12,7 @@ public class kvadrataPerimetrs {
         result +=side3;
         result +=side4;
 
-        System.out.println ("perimerts:" + result);
+        System.out.println ("perimetrs:" + result);
 
     }
 }
