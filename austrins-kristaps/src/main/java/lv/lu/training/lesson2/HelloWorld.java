@@ -11,6 +11,7 @@ public class HelloWorld {
 
         String part1 = "Hello ";
         String part2 = "world!";
+
         System.out.println(part1 + part2);
 
         String result = part1 + "" + part2;
