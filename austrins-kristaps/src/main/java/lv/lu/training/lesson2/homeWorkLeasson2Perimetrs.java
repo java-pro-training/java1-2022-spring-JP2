@@ -1,6 +1,6 @@
 package lv.lu.training.lesson2;
 
-class homeWorkLeasson2dot1 {
+public class homeWorkLeasson2Perimetrs {
     public static void main(String[] args) {
 
         int side1 = 10;
