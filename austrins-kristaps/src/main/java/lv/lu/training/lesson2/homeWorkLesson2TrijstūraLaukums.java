@@ -1,6 +1,6 @@
 package lv.lu.training.lesson2;
 
-public class homeWorkLesson2TrijsturaLaukums {
+public class homeWorkLesson2TrijstūraLaukums {
 
     public static void main(String[] args) {
 
@@ -9,6 +9,6 @@ public class homeWorkLesson2TrijsturaLaukums {
 
         int result = (base * height)/2;
 
-        System.out.println("Laukums: " result);
+        System.out.println("Laukums: " + result);
     }
 }
