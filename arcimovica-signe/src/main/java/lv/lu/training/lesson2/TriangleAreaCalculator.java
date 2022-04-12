@@ -5,7 +5,7 @@ public class TriangleAreaCalculator {
         int base = 10;
         int height = 20;
         int result1 = base * height;
-        int result = result1 /2; 
+        int result = result1 /2;
         System.out.println(result);
 
            }
