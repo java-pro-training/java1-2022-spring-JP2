@@ -12,10 +12,4 @@ public class Person {
         return name;
     }
 
-    public static void main(String[] args) {
-        Person person = new Person("Jānis Bērziņš");
-
-        System.out.println(person.getName());
-    }
-
 }
