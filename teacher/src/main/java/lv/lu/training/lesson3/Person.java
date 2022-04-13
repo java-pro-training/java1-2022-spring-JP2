@@ -4,7 +4,8 @@ public class Person {
 
     private String givenName;
     private String familyName;
-    private int age = 0;
+    private int age;
+    private Address address;
 
     public Person(String givenName, String familyName) {
         this.givenName = givenName;
@@ -43,6 +44,26 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public String getFullAddress() {
+        return address.getStreet()
+                + " "
+                + address.getHouseNumber()
+                + ", "
+                + address.getCity()
+                + ", "
+                + address.getCountry()
+                + ", "
+                + address.getZipCode();
     }
 
     public String getFullName() {
