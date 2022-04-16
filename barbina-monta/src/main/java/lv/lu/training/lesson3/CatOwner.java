@@ -2,7 +2,11 @@ package lv.lu.training.lesson3;
 
 public class CatOwner {
     public static void main(String[] args) {
-        Cat myCat = new Cat ("orange", "Fox", 4, 7, "unknown");
+        Cat myCat = new Cat ("black", "Tom", 5);
+
+        myCat.setSpecies("Ragdoll");
+        myCat.setAge(4);
+
 
         System.out.println("My cat`s color - "+ myCat.getColor());
         System.out.println("name - " + myCat.getName());

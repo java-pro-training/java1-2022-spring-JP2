@@ -12,12 +12,11 @@ public class Cat {
     private int weight;
 
 
-public Cat (String color, String name, int weight, int age, String species) {
+public Cat (String color, String name, int weight) {
     this.color = color;
     this.name = name;
     this.weight = weight;
-    this.age = age;
-    this.species = species;
+
 }
 
 public void setColor(String color) {
