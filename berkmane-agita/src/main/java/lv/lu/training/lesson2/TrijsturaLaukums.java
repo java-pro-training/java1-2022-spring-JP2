@@ -5,7 +5,7 @@ package lv.lu.training.lesson2;
 
             int base = 10;
             int hight = 20;
-            int  result = ((base*hight) /2);
+            int  result = ((base * hight) /2);
 
         System.out.println(result);
         }
