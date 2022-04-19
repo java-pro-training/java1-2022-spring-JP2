@@ -12,7 +12,7 @@ public class PatvaligoSkaitluGenerators {
         int sk3 = randomNumberGenerator.nextInt();
         int summa = sk1+sk2+sk3;
 System.out.println("skaitļu " + sk1 + ", " + sk2 + ", " +sk3 + " SUMMA IR  " + summa);
-        System.out.println( " CITS PIERAKSTS: ");
+        System.out.println( " CITS PIERAKSTS:  ");
         System.out.println(sk1 + " + " + sk2 + " + " +sk3 + "  =  " + summa);
     }
 
