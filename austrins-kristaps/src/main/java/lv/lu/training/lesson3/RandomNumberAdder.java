@@ -9,10 +9,10 @@ public class RandomNumberAdder {
         Random randomNumberGenerator = new Random();
 
         int pirmaisSkaitlis = randomNumberGenerator.nextInt();
-        int otraisSkatlis = randomNumberGenerator.nextInt();
+        int otraisSkaitlis = randomNumberGenerator.nextInt();
         int tresaisSkaitlis = randomNumberGenerator.nextInt();
 
-        int result = pirmaisSkaitlis + otraisSkatlis + tresaisSkaitlis;
+        int result = pirmaisSkaitlis + otraisSkaitlis + tresaisSkaitlis;
 
         System.out.println("Rezultāts = " + result);
     }
