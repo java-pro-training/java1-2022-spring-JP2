@@ -1,6 +1,7 @@
 package lv.lu.training.lesson2;
 
 public class TriangleAreaCalculator {
+
     public static void main(String[] args) {
 
         int base = 27;

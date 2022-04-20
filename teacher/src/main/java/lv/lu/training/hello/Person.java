@@ -12,4 +12,8 @@ public class Person {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }
