@@ -1,6 +1,7 @@
 package lv.lu.training.lesson2;
 
 public class homeWorkLesson2Perimetrs {
+
     public static void main(String[] args) {
 
         int side1 = 10;
@@ -14,5 +15,6 @@ public class homeWorkLesson2Perimetrs {
         result += side4;
 
         System.out.println("perimetrs: " +result);
+
     }
 }
