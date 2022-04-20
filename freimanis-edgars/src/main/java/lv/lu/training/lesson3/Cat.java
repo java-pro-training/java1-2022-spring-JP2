@@ -7,17 +7,12 @@ public class Cat {
     public int age;
     public int weight;
 
-    public Cat(String color, String name, int weight) {
-
-    }
-
-
-
-
-    {
+    public Cat(String color, String name, int weight, int age, String species) {
         this.color = color;
         this.name = name;
         this.weight = weight;
+        this.age = age;
+        this.species = species;
     }
 
         public String getColor() {
@@ -32,8 +27,10 @@ public class Cat {
         public int getAge() {
             return age;
     }
-
-    public int getWeight() {
+        public int getWeight() {
         return weight;
     }
+
+
+
 }
