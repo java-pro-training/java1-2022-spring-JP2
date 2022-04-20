@@ -37,4 +37,19 @@ public class Cat {
         this.weight = weight;
     }
 
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setAge(int Age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+
+
+
 }
