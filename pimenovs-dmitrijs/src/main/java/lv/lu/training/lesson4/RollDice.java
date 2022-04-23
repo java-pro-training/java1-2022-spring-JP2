@@ -5,11 +5,11 @@ import java.util.Random;
 public class RollDice {
     public static void main(String[] args){
         Random random = new Random();
-        int maxNumber = 6;
-        int minNumber = 1;
+        int dice1;
+        int dice2;
 
-        int dice1 = random.nextInt(minNumber,maxNumber);
-        int dice2 = random.nextInt(minNumber,maxNumber);
+       dice1 = random.nextInt(1,7);
+        dice2 = random.nextInt(1,7);
         System.out.println("dice1 - " + dice1);
         System.out.println("dice2 - " + dice2);
 
