@@ -22,9 +22,6 @@ public class GreatestOfThree {
         }else if(thirdNumber > firstNumber && thirdNumber > secondNumber) {
             System.out.println("Third Number is biggest");
 
-        }else if(firstNumber==secondNumber || firstNumber==thirdNumber){
-            System.out.println("Try to choose another number");
-
         }else{
             System.out.println("Try to choose another number");
         }
