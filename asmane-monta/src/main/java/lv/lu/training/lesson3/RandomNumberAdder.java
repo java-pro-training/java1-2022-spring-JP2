@@ -11,7 +11,5 @@ public class RandomNumberAdder {
         int thirdNumber = randomNumberGenerator.nextInt();
 
         System.out.println(firstNumber + secondNumber + thirdNumber);
-
     }
-
 }
