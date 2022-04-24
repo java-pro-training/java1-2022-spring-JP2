@@ -7,9 +7,7 @@ public class GreatestOfThree {
 
         Scanner scanner = new Scanner(System.in);
 
-        //This was a very baffling task until interned showed me how similar runs through cmd
-        //And by chance I realized I can actually input those values when running...
-        //Not sure if that was the meaning on how this should work
+        //Not sure if this was the meaning on how this should work
 
         System.out.print("Enter first number- ");
         int firstNumber = scanner.nextInt();
@@ -30,10 +28,9 @@ public class GreatestOfThree {
             System.out.println("The greatest number you entered is:" + firstNumber);
         else if (secondNumber >= firstNumber && secondNumber >= thirdNumber)
             System.out.println("The greatest number you entered is:" + secondNumber);
-        else if (thirdNumber >= firstNumber && thirdNumber >= secondNumber)
-            System.out.println("The greatest number you entered is:" + thirdNumber);
         else
-            System.out.println("Something in your logic above is faulty");
+            System.out.println("The greatest number you entered is:" + thirdNumber);
+
 
     }
 }
