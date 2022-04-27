@@ -9,7 +9,7 @@ public class RandomNumberAdder {
 
        int result = randomNumberGenerator.nextInt() + randomNumberGenerator.nextInt() + randomNumberGenerator.nextInt() ;
 
-        System.out.println("Trīs random skaitļu summa - " + result);
+        System.out.println("Trīs random skaitļu summa " + result);
 
     }
 
