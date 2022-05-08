@@ -15,14 +15,9 @@ public class Cat {
         this.age = age;
     }
 
-    public Cat(String black, String tom, int weight) {
-
-    }
-
     public String getColor() {
         return color;
     }
-
     public void setColor(String color) {
         this.color = color;
     }
@@ -30,23 +25,20 @@ public class Cat {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
-
     public int getWeight() {
         return weight;
     }
-
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
     public String getSpecies() {
         return species;
     }
-
     public void setSpecies(String species) {
         this.species = species;
     }
@@ -54,7 +46,6 @@ public class Cat {
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
