@@ -11,16 +11,5 @@ public class GreatestOfThree {
         double secondNumber = scanner.nextDouble();
         System.out.println("Ievadiet trešo skaitli: ");
         double thirdNumber = scanner.nextDouble();
-        if (firstNumber > secondNumber || thirdNumber) {
-            System.out.println("Lielākais skaitlis ir" + firstNumber);
-        } else if (secondNumber > firstNumber || thirdNumber) {
-            System.out.println("Lielākais skaitlis ir" + secondNumber);
-        } else if (thirdNumber > firstNumber || secondNumber) {
-            System.out.println("Lielākais skaitlis ir" + thirdNumber);
-        } else {
-            System.out.println("Nav rezultāta");
-        }
-
-
     }
 }
