@@ -5,7 +5,6 @@ public class Numbers {
     public int getMaxNumber() {
         return maxNumber;
     }
-
     public void setMaxNumber(int maxNumber) {
         this.maxNumber = maxNumber;
     }
@@ -13,7 +12,6 @@ public class Numbers {
     public int getMinNumber() {
         return minNumber;
     }
-
     public void setMinNumber(int minNumber) {
         this.minNumber = minNumber;
     }
@@ -21,7 +19,6 @@ public class Numbers {
     public int getFirstInputNumber() {
         return firstInputNumber;
     }
-
     public void setFirstInputNumber(int firstInputNumber) {
         this.firstInputNumber = firstInputNumber;
     }
@@ -29,15 +26,11 @@ public class Numbers {
     public int getSecondInputNumber() {
         return secondInputNumber;
     }
-
     public void setSecondInputNumber(int secondInputNumber) {
         this.secondInputNumber = secondInputNumber;
     }
 
-    public int getThirdInputNumber() {
-        return thirdInputNumber;
-    }
-
+    public int getThirdInputNumber() {return thirdInputNumber;}
     public void setThirdInputNumber(int thirdInputNumber) {
         this.thirdInputNumber = thirdInputNumber;
     }
