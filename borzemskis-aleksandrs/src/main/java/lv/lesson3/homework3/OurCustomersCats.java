@@ -35,7 +35,4 @@ public class OurCustomersCats {
 
         System.out.println("\n" + outputCat);
     }
-
-
-
 }
