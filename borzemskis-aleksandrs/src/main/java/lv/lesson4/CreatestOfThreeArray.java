@@ -35,7 +35,7 @@ public class CreatestOfThreeArray {
             int[] digits = new int[numberOfDigits];//--Array digit
 
 //--Start input numbers into array digits
-            for (int i = 0; i < numberOfDigits; i++) {
+            for (int i = 0; i < digits.length; i++) {
                 int numberForLoop = i + 1;
                 System.out.println("Please input " + numberForLoop + ". number");
                 //--Start to try if input symbol is not number
