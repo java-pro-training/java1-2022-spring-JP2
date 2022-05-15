@@ -11,6 +11,9 @@ public class CreatestOfThree {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please input first digit");
+//------------We can use method isInputNumberIsInteger() to check input
+//        userAnswers.setFirstInputNumber(userAnswers.isInputNumberIsInteger());
+//------------
         userAnswers.setFirstInputNumber(scanner.nextInt());
         System.out.println("Please input second digit");
         userAnswers.setSecondInputNumber(scanner.nextInt());
@@ -23,7 +26,7 @@ public class CreatestOfThree {
         biggerNumber = maxNumber.max(userAnswers.getFirstInputNumber(),userAnswers.getSecondInputNumber(),userAnswers.getThirdInputNumber());
         System.out.println("\nThe bigger number is: " + biggerNumber);
     }
-    public int max(int a1,int a2, int a3){
+    int max(int a1,int a2, int a3){
         if (a1>a2 && a1>a3){
             return a1;
         }else if (a2>a1 && a2>a3){

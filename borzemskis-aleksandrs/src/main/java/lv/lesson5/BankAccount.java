@@ -6,19 +6,18 @@ public class BankAccount {
     private double userBalance;
     private double userCredit;
     private double usedCredit;
-    private boolean isEnoughMoney;
+    private boolean enoughMoney;
 
 
     public String getUserPin(){return userPin;}
 
     public boolean isEnoughMoney(int value) {
-        isEnoughMoney = (userBalance + userCredit - usedCredit - value) >= 0;
-        return isEnoughMoney;
+        enoughMoney = (userBalance + userCredit - usedCredit - value) >= 0;
+        return enoughMoney;
     }
 
-    public boolean isNoBanknotes(int value) {
-        boolean banknotes = (value % 10) != 0;
-        return banknotes;
+    public boolean isNoSmallBanknotes(int value) {
+        return (value % 10) != 0;
     }
 
     public BankAccount(String userAccount, String userPin, double userBalance, double userCredit) {
@@ -38,33 +37,33 @@ public class BankAccount {
     }
 
     public void topUp(double value, String inputPin) {
-        if (isWrongPin(inputPin)) {
+        if (isWrongPin(inputPin)) {//Check PIN
             System.out.println("\nWrong PIN!");
-        } else if (usedCredit > 0 && usedCredit > value) {
+        } else if (usedCredit > 0 && value < usedCredit) {//Check if loan bigger than input money
             this.usedCredit = usedCredit - value;
             System.out.println("\nJūs iemaksat kontā: " + value);
-        } else if (usedCredit > 0 && usedCredit <= value) {
+        } else if (usedCredit > 0 && usedCredit <= value) {//Check if loan less than input money
             this.userBalance += value - usedCredit;
             usedCredit = 0;
             System.out.println("\nJūs iemaksat kontā: " + value);
-        } else {
+        } else {//if we have no loan
             this.userBalance += value;
             System.out.println("\nJūs iemaksat kontā: " + value);
         }
     }
 
     public void withDraw(int value, String inputPin) {
-        isEnoughMoney(value);
-        if (isWrongPin(inputPin)) {
+        isEnoughMoney(value);//we call method to check available money
+        if (isWrongPin(inputPin)) {//Check PIN
             System.out.println("\nWrong PIN!");
-        }else if(!isEnoughMoney){
+        }else if(!enoughMoney){//Check available money
             System.out.println("\nThe account does not have enough money");
-        }else if(isNoBanknotes(value)){
+        }else if(isNoSmallBanknotes(value)){//Check demanded money for available banknotes
             System.out.println("\nWe can issue money in 10, 20, 50 banknotes");
-        }else if (userBalance >= value) {
+        }else if (userBalance >= value) {//if user balance bigger than demanded money
             this.userBalance -= value;
             System.out.println("\nJūs saņēmat no konta: " + value);
-        } else {
+        } else {//if user balance less than demanded money
             this.usedCredit += value - userBalance;
             clearBalance();
             System.out.println("\nJūs saņēmat no konta: " + value);
