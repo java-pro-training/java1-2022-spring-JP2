@@ -11,11 +11,11 @@ public class GreatestOfThreeSecondTry {
             double secondNumber = scanner.nextDouble();
             System.out.println("Ievadiet trešo skaitli: ");
             double thirdNumber = scanner.nextDouble();
-            if (secondNumber < firstNumber > thirdNumber) {
+            if (secondNumber < firstNumber && firstNumber > thirdNumber) {
                 System.out.println("Lielākais skaitlis ir" + firstNumber);
-            } else if (firstNumber < secondNumber > thirdNumber) {
+            } else if (firstNumber < secondNumber && secondNumber > thirdNumber) {
                 System.out.println(("Lielākais skaitlis ir" + secondNumber));
-            } else if (firstNumber < thirdNumber > secondNumber) {
+            } else if (firstNumber < thirdNumber && thirdNumber > secondNumber) {
                 System.out.println(("Lielākais skaitlis ir " + thirdNumber));
             }else{
                 System.out.println("Nav rezultāta");
