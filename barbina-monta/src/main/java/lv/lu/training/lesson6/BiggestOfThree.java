@@ -2,7 +2,7 @@ package lv.lu.training.lesson6;
 
 import java.util.Scanner;
 
-public class BigestOfThree {
+public class BiggestOfThree {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

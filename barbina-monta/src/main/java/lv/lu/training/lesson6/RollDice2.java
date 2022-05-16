@@ -55,7 +55,6 @@ public class RollDice2 {
                     System.out.println("Jūs esat uzvarējis " + sumOfWins + " reizes!");
                 }
 
-
             }
         }
     }
