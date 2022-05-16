@@ -23,7 +23,10 @@ public class CreatestOfThree {
         System.out.println("test\n" + userAnswers.getFullNumbers());
 
         CreatestOfThree maxNumber = new CreatestOfThree();
-        biggerNumber = maxNumber.max(userAnswers.getFirstInputNumber(),userAnswers.getSecondInputNumber(),userAnswers.getThirdInputNumber());
+        biggerNumber = maxNumber.max(
+                userAnswers.getFirstInputNumber(),
+                userAnswers.getSecondInputNumber(),
+                userAnswers.getThirdInputNumber());
         System.out.println("\nThe bigger number is: " + biggerNumber);
     }
     int max(int a1,int a2, int a3){
