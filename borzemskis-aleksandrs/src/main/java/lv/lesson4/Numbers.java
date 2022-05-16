@@ -45,9 +45,6 @@ public class Numbers {
     private int thirdInputNumber;
     private int inputNumber;
 
-    public void setInputNumber(int inputNumber) {this.inputNumber = inputNumber;}
-    public int getInputNumber(){return inputNumber;}
-
     public Numbers(){}
 
     public Numbers(int maxNumber, int minNumber){
@@ -64,7 +61,7 @@ public class Numbers {
                 + "\nSecond input number is: " + secondInputNumber
                 + "\nThird input number is: " + thirdInputNumber;
     }
-
+//---A method to input integer number
     public int isInputNumberIsInteger(){
         boolean tryIntInput;
         do {
@@ -74,7 +71,7 @@ public class Numbers {
                 inputNumber = scanner.nextInt();
             } catch (InputMismatchException exception) {//try if input is not integer
                 tryIntInput = true;
-                System.out.println("Please write an integer number");
+                System.out.print("Please write an integer number: ");
             }
         } while (tryIntInput);
         return inputNumber;
