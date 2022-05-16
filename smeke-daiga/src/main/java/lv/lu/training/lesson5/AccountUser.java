@@ -1,5 +1,5 @@
 package lv.lu.training.lesson5;
-
+/*
 import java.util.Scanner;
 
 public class AccountUser {
@@ -12,7 +12,7 @@ public class AccountUser {
         Scanner pinScanner = new Scanner(System.in);
         Scanner opScanner = new Scanner(System.in);
 
-        /*int count = 0;
+        int count = 0;
 
         while (count<3) {
             count++;
@@ -28,7 +28,7 @@ public class AccountUser {
         if (count ==3) {
             System.out.println("Sorry you have entered PIN wrong 3 times. Tough luck but no access")
         }
-        */
+
 
 
         int pinCodeByUser = 1234;
@@ -51,8 +51,8 @@ public class AccountUser {
                 break;
         }
 
-        /* myAccount.topUp(toAdd);
-        System.out.println("Mana konta stāvoklis: " + "\r\n" + myAccount);*/
+        myAccount.topUp(toAdd);
+        System.out.println("Mana konta stāvoklis: " + "\r\n" + myAccount);
 
 
 
@@ -60,3 +60,4 @@ public class AccountUser {
 
 
 }
+*/
