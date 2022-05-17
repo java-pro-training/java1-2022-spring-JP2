@@ -31,16 +31,16 @@ public class BankCard {
 
     @Override
     public String toString() {
-        return "BANK CARD" + "\r\n" +
-                "Name of the bank = " + bankName + "\r\n" +
-                "Origin = " + origin + "\r\n" +
-                "Card holder name = " + holderName + "\r\n" +
-                "Card number = " + number + "\r\n" +
-                "Valid thru = " + expiryDate + "\r\n" +
-                "CVV = " + cvv + "\r\n" +
-                "Balance = " + balance;
+        return "BankCard{" +
+                "BankName=`" + bankName + "` " +
+                ", origin=`" + origin + "` " +
+                ", holderName=`" + holderName + "` " +
+                ", number=`" + number + "` " +
+                ", expiryDate=" + expiryDate +
+                ", cvv=`" + cvv + "` " +
+                ", balance=" + balance +
+                '}';
 
 
     }
-}
 }

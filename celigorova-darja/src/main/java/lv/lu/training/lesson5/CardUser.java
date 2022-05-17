@@ -4,7 +4,7 @@ public class CardUser {
     public static void main(String[] args) {
 
         BankCard myCard = new BankCard(
-                "Swedbank",
+                "Banka Citadele",
                 "Visa",
                 "Roberts Polis",
                 "2345678345",
