@@ -3,42 +3,26 @@ package lv.lu.training.lesson6;
 import java.util.Random;
 
 public class RollDiceAddition {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Random random = new Random();
         int sumOfWins = 0;
         int sumOfLosses = 0;
-        int result = 0;
+        int sumOfDices = 0;
+        int totalRolls = 0;
 
-        while (result != 12){
-
-            int dice1;
-            int dice2;
-            dice1 = random.nextInt(1,7);
-            dice2 = random.nextInt(1,7);
-            result = dice1 + dice2;
-            System.out.println("dice1 - " + dice1);
-            System.out.println("dice2 - " + dice2);
-
-            if (result == 7 || result == 11){
+        while (sumOfDices != 12) {
+            sumOfDices=random.nextInt(1,7)+random.nextInt(1,7);
+            if (sumOfDices == 7 || sumOfDices == 11) {
                 sumOfWins++;
-                System.out.println("Result is: " + result);
-                System.out.println("You won");
-                System.out.println("Total games won: " + sumOfWins + " " + "Total games lost: " + sumOfLosses);
-            }else if (result ==2 || result ==3 || result == 6){
+            } else if (sumOfDices == 2 || sumOfDices == 3 || sumOfDices == 6) {
                 sumOfLosses++;
-                System.out.println("Result is: " + result);
-                System.out.println("You lose");
-                System.out.println("Total games won: " + sumOfWins + " " + "Total games lost: " + sumOfLosses);
-            }else if (result == 12){
-                System.out.println("Result is: " + result);
-                System.out.println("Game finished");
-                System.out.println("Total games won: " + sumOfWins + " " + "Total games lost: " + sumOfLosses);
-            }else{
-                System.out.println("Result is: " + result);
-                System.out.println("Try again");
-                System.out.println("Total games won: " + sumOfWins + " " + "Total games lost: " + sumOfLosses);
+            } else {
+
             }
+            totalRolls++;
+
         }
+        System.out.println("Played: "+ totalRolls+ " "+"Wins: "+sumOfWins+" "+"Losses: "+sumOfLosses);
     }
 }
 
