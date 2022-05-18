@@ -11,6 +11,9 @@ public class Cat {
         this.color = color;
         this.name = name;
         this.weight = weight;
+        this.species = species;
+        this.age = age;
+
     }
 
     public String getColor() {
@@ -29,24 +32,23 @@ public class Cat {
         this.name = name;
     }
 
-    public int getWeight() {
-        return weight;
+    public void setSpecies(String species) {
+        this.species = species;
     }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
     public String getSpecies() {
         return species;
     }
-
-    public void setAge(int Age) {
+    public void setAge(int age) {
         this.age = age;
     }
-
     public int getAge() {
         return age;
+    }
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+    public int getWeight() {
+        return weight;
     }
 
 
