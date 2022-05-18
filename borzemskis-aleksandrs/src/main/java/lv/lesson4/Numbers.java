@@ -1,5 +1,8 @@
 package lv.lesson4;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Numbers {
 
     public int getMaxNumber() {
@@ -40,6 +43,9 @@ public class Numbers {
     private int firstInputNumber;
     private int secondInputNumber;
     private int thirdInputNumber;
+    private int inputNumber;
+
+    public Numbers(){}
 
     public Numbers(int maxNumber, int minNumber){
         this.maxNumber = maxNumber;
@@ -55,4 +61,20 @@ public class Numbers {
                 + "\nSecond input number is: " + secondInputNumber
                 + "\nThird input number is: " + thirdInputNumber;
     }
+//---A method to input integer number
+    public int isInputNumberIsInteger(){
+        boolean tryIntInput;
+        do {
+            tryIntInput = false;
+            Scanner scanner = new Scanner(System.in);
+            try {
+                inputNumber = scanner.nextInt();
+            } catch (InputMismatchException exception) {//try if input is not integer
+                tryIntInput = true;
+                System.out.print("Please write an integer number: ");
+            }
+        } while (tryIntInput);
+        return inputNumber;
+    }
+
 }
