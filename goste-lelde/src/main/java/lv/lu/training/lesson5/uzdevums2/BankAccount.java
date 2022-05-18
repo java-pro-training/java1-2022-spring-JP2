@@ -8,6 +8,7 @@ public class BankAccount {
     private double usedCredit;
     private double debitBalance;
     boolean isPinCorrect;
+    boolean isEnoughMoney;
  //   private double accountBalance;
 
 
@@ -28,20 +29,23 @@ public class BankAccount {
         this.debitBalance = 0.00;
     }
 
-
     public void setAccountNumber(String accountNumber){this.accountNumber=accountNumber;}
     public void setPinCode(String pinCode){this.pinCode=pinCode;}
     public void setDebitBalance(double debitBalance){this.debitBalance=debitBalance;}
+    public void setUsedCredit(double usedCredit){this.usedCredit=usedCredit;}
 
-    public String getAccountNumber() {return accountNumber;}
-    public String getPinCode(){return pinCode;}
-    public double getCreditLimit(){return creditLimit;}
+    public String getAccountNumber(){return accountNumber;}
     public double getUsedCredit(){return usedCredit;}
     public double getDebitBalance(){return debitBalance;}
     public double getAccountBalance(){return (debitBalance-usedCredit);}
 
     public void checkPinCode(String pinCode){
         isPinCorrect=this.pinCode.equals(pinCode);
+    }
+
+    public void checkAvailableFunds(double amount){
+        double availableAmount = this.debitBalance + (this.creditLimit-this.usedCredit);
+        isEnoughMoney = (availableAmount - amount)>0.001;
     }
 
     public void topUp(double amount, String pinCode){
@@ -65,15 +69,18 @@ public class BankAccount {
 
     public void withdraw(double amount, String pinCode){
         if (isPinCorrect){
+            checkAvailableFunds(amount);
             if (amount>=debitBalance){
-                usedCredit += (amount-debitBalance);
-                debitBalance = 0;
+                if (isEnoughMoney){
+                    usedCredit += (amount-debitBalance);
+                    debitBalance = 0;
+                }else{
+                    System.out.println("Kontā nepietiek līdzekļu naudas izņemšanai!");
+                    System.out.println("Pieejamā summa naudas izņemšanai: "+(this.debitBalance + (this.creditLimit-this.usedCredit)));
+                }
             }else{
                 debitBalance -= amount;
             }
-
-
-
         }else{
             System.out.println("Ievadītais PIN ir nepareizs.");
             System.out.println("Mēģiniet vēlreiz!");
