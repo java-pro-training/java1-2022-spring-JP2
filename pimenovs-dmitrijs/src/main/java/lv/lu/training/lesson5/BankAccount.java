@@ -51,18 +51,22 @@ public class BankAccount {
             }
         }
 
-        @Override
-        public String toString() {
-            return "BankAccount{" +
-                    "accountNumber='" + accountNumber + '\'' +
-                    ", pinCode='" + pinCode + '\'' +
-                    ", balance=" + balance +
-                    ", creditLimit=" + creditLimit +
-                    ", usedCredit=" + usedCredit +
-                    ", isPinCodeValid=" + isPinCodeValid +
-                    '}';
-        }
+public String getPinCode(){
+            return pinCode;
+}
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "accountNumber='" + accountNumber + '\'' +
+                ", pinCode='" + pinCode + '\'' +
+                ", balance=" + balance +
+                ", creditLimit=" + creditLimit +
+                ", usedCredit=" + usedCredit +
+                ", isPinCodeValid=" + isPinCodeValid +
+                '}';
     }
+}
 
 
 
