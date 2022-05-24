@@ -2,7 +2,7 @@ package lv.lu.training.lesson6;
 
 import java.util.Random;
 
-public class RollDiceAdvanced {
+public class RollDiceHomework {
     public static void main (String[] args) {
         Random random = new Random();
         int sumOfWins = 0;
@@ -23,20 +23,20 @@ public class RollDiceAdvanced {
                 sumOfWins++;
                 System.out.println("Spēle ir vinnēta!!!!");
                 System.out.println("Vinnētas reizes: " +sumOfWins +" Zaudētas reizes: " +sumOfLosses);
-                System.out.println("=================================================================");
+                System.out.println("================================================");
             } else if (result == 2 || result==3 || result ==6) {
                 sumOfLosses++;
                 System.out.println("Spēle ir zaudēta :(");
                 System.out.println("Vinnētas reizes: " + sumOfWins + " Zaudētas reizes: " + sumOfLosses);
-                System.out.println("=================================================================");
+                System.out.println("================================================");
             } else if (result ==12){
                 System.out.println("Spēles beigas.");
                 System.out.println("Vinnētas reizes: " +sumOfWins +" Zaudētas reizes: " +sumOfLosses);
-                System.out.println("=================================================================");
+                System.out.println("================================================");
             } else {
                 System.out.println("Metam atkal!");
                 System.out.println("Vinnētas reizes: " +sumOfWins +" Zaudētas reizes: " +sumOfLosses);
-                System.out.println("=================================================================");
+                System.out.println("================================================");
             }
         }
     }
