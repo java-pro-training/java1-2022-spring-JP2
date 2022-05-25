@@ -27,7 +27,7 @@ public class Car {
     @Override
     public boolean equals(Object that){
         if (this==that) return true;
-        if (this==null || getClass() != that.getClass()) return false;
+        if (that==null || getClass() != that.getClass()) return false;
         Car car = (Car) that;
         return Objects.equals(colour,car.colour)&&Objects.equals(year,car.year)&&
                 Objects.equals(manufacturer,car.manufacturer);
