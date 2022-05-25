@@ -1,12 +1,13 @@
 package lv.lu.training;
 
+import java.util.Scanner;
+
 public class Math {
 
     private int result;
     private int result2;
     private int result3;
     private int result4;
-
     public void reizinasana(int a, int b) {
         result = a * b;
     }
@@ -44,7 +45,6 @@ public class Math {
         difficult.saskaitisana(33);
         difficult.dalisana(3);
         difficult.reizinasana2(2,5);
-
         System.out.println(difficult.getResult());
         System.out.println(difficult.getResult2());
         System.out.println(difficult.getResult3());
