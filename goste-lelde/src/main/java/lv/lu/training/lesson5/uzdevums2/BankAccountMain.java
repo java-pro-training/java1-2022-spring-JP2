@@ -32,7 +32,7 @@ public class BankAccountMain {
             if (i == 1) {
                 System.out.println("Nepareizs PIN ir ievadīts 3 reizes.");
                 System.out.println("Karte ir bloķēta.");
-                myAccount=null;
+                return;
             } else {
                 System.out.println("Nepareiz PIN. Mēģiniet vēlreiz:");
             }
