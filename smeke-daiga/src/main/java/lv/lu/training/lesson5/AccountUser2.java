@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AccountUser2 {
 
     public static void main(String[] args) {
-        BankAccount2 myAccount = new BankAccount2("12124263463", "0001", 100d, 200d, 180d);
+        BankAccount2 myAccount = new BankAccount2("12124263463", "0001", 168.45d, 300d, 0d);
 
         String validPin = myAccount.pinCode();
 
