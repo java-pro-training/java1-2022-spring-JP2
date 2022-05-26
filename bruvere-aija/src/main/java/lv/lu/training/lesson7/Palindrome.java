@@ -7,6 +7,7 @@ public class Palindrome {
     }
 
     private static char[] loweredCharArrayOf(String text) {
+        return new char[0];
     };
     private static boolean isPalindrome(char[] chars){
         for (int i =0, j = chars.length - 1; i<= chars.length/2; i++, j--){
