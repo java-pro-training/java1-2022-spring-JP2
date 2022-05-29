@@ -2,6 +2,8 @@ package lv.lu.training.lesson7;
 
 //Izveidojam jaunu klasi ar nosaukumu ArrayUtils
 
+import java.util.Arrays;
+
 public class ArrayUtils {
 
     //pievienojam statisku metodi reverse(int arr)
@@ -19,6 +21,17 @@ public class ArrayUtils {
         }
 
         return result;
+
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = new int[] {1, 2, 3, 4, 5};
+        int[] reversedNumbers = ArrayUtils.reverse(numbers);
+
+        //To print an Array  - Arrays.toString. Can also use for loop but Arrays.toString better
+
+        System.out.print(Arrays.toString(numbers));
+        System.out.print(Arrays.toString(reversedNumbers));
 
     }
 }
