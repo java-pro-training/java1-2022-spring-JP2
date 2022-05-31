@@ -13,6 +13,7 @@ public class FindingOddNumber {
     public int getFrom() {return from;}
     public int getTill() {return till;}
 
+
     public static boolean isOdd(int number){
         return (number % 2 != 0);
     }
