@@ -2,19 +2,25 @@ package lv.lu.training.lesson8.homework2;
 
 public class Executive extends Employee {
 
-    private double bonus;
+    public void setBonus(double bonus){
+        this.bonus = bonus;
+    }
+    private double getBonus()
+
+    {
+        return bonus;
+    }
+        private double bonus;
+
 
     public Executive(String firstName, String lastName, String socialSecurityNumber, double salary) {
         super(firstName, lastName, socialSecurityNumber, salary);
     }
 
-    public void awardBonus(double bonus) {
-        this.bonus += bonus;
-    }
-
     @Override
     public double pay() {
-        return pay() + bonus;
+        double result = getSalary() + getBonus();
+               return result;
     }
 
     @Override

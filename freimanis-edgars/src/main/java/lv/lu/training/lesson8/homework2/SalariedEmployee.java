@@ -29,6 +29,7 @@ public class SalariedEmployee extends Employee {
                 "firstName='" + firstName +
                 ", lastName='" + lastName +
                 ", socialSecurityNumber='" + socialSecurityNumber +
+                ", salary=" + salary +
                 ", weeklySalary=" + weeklySalary +
                 '}';
     }

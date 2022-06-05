@@ -15,7 +15,7 @@ public class payApp {
             ((HourlyEmployee) payableObjects[3]).addHours(144);
 
             payableObjects[4] = new Executive("Ding", "Dong", "132-56-654", 1400d);
-            ((Executive) payableObjects[4]).awardBonus(1000);
+            ((Executive) payableObjects[4]).setBonus(1000);
 
             for (Payable currentPayable : payableObjects) {
                 if (currentPayable != null) {

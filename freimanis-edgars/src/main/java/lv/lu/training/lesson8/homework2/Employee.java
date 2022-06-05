@@ -27,6 +27,9 @@ public abstract class Employee implements Payable {
     public void setSocialSecurityNumber(String socialSecurityNumber){
         this.socialSecurityNumber=socialSecurityNumber;
     }
+    public void setSalary(double salary){
+        this.salary=salary;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -38,6 +41,11 @@ public abstract class Employee implements Payable {
     public String getSocialSecurityNumber() {
         return socialSecurityNumber;
     }
+
+    public double getSalary() {
+        return salary;
+    }
+
     @Override
     public double pay() {
         return salary;
