@@ -20,7 +20,7 @@ public class OddNumberLookup {
         return number % 2 !=0;
     }
     public static void main(String[] args){
-        OddNumberLookup interval = new OddNumberLookup(10,90);
+        OddNumberLookup interval = new OddNumberLookup(3,7);
         for (int i = interval.getFrom();i <= interval.getTill();i++){
             if (isOdd(i)){
                 System.out.println(i);
