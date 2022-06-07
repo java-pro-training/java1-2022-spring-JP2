@@ -4,20 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class WordCounter implements Runnable {
+public class WordCounter {
 
-    @Override
+    public static void main(String[] args) {
+        WordCounter wordCounter = new WordCounter();
+        wordCounter.run();
+    }
 
     public void run() {
-
         Map<String, Integer> wordCounts = new HashMap<>();
         Scanner input = new Scanner(System.in);
         while (true) {
-            System.out.println("Please enter line of words or type quit: ");
+            System.out.println("Please enter line of words or type quit:");
             String line = input.nextLine();
             if (line.contains("quit")) break;
             for (String word : line.split(" ")) {
                 addWord(word, wordCounts);
+
             }
             System.out.println(wordCounts);
         }
@@ -37,12 +40,7 @@ public class WordCounter implements Runnable {
             value++;
             wordMap.put(word, value);
         }
-    }
 
-    public static void main(String[] args) {
-        WordCounter wordCounter = new WordCounter();
-        wordCounter.run();
     }
 
 }
-
