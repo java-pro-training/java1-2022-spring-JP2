@@ -10,10 +10,9 @@ public class WordCounter {
         WordCounter wordCounter = new WordCounter();
         wordCounter.run();
     }
-
+Map<String, Integer> wordCounts = new HashMap<>();
     public void run() {
-        Map<String, Integer> wordCounts = new HashMap<>();
-        Scanner input = new Scanner(System.in);
+      Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println("Please enter line of words or type quit:");
             String line = input.nextLine();
