@@ -11,6 +11,7 @@ public class WordCounter {
         wordCounter.run();
     }
 Map<String, Integer> wordCounts = new HashMap<>();
+    
     public void run() {
       Scanner input = new Scanner(System.in);
         while (true) {
