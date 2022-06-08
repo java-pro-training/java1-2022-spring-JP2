@@ -1,4 +1,3 @@
-//pagaidam nesanāk šķirot pēc vārdu skaita tekstā
 import java.util.*;
 
 public class wordCounterV2 {
@@ -20,15 +19,11 @@ public class wordCounterV2 {
                 addWord(word, wordCounts);
             }
 
-            for(String key: sortByKey(wordCounts)){
-                System.out.println("["+key+"="+wordCounts.get(key)+"]");
+            for(Map.Entry<String,Integer> key: sortByValue(wordCounts)){
+                System.out.println(key.getKey()+"="+key.getValue());
             }
         }
-
-        for (String word : wordCounts.keySet()) {
-            System.out.println(word + " = " + wordCounts.get(word));
-        }
-
+        
         input.close();
     }
 
@@ -42,9 +37,9 @@ public class wordCounterV2 {
         }
 
     }
-    List<String> sortByKey(Map<String,Integer> map){
-        List<String> listOfKeys = new ArrayList<>(map.keySet());
-        Collections.sort(listOfKeys);
+    List<Map.Entry<String ,Integer>> sortByValue(Map<String,Integer> map){
+        List<Map.Entry<String ,Integer>> listOfKeys = new ArrayList<>(map.entrySet());
+        listOfKeys.sort(Map.Entry.comparingByValue());
         return listOfKeys;
     }
 
