@@ -1,4 +1,3 @@
-//pagaidam nesanāk šķirot pēc vārdu skaita tekstā
 import java.util.*;
 
 public class wordCounterV2 {
@@ -14,37 +13,33 @@ public class wordCounterV2 {
         Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println("Please enter line of words or type quit:");
-            String line = input.nextLine();
+            String line = input.nextLine().toLowerCase();
             if (line.contains("quit")) break;
             for (String word : line.split(" ")) {
                 addWord(word, wordCounts);
             }
 
-            for(String key: sortByKey(wordCounts)){
-                System.out.println("["+key+"="+wordCounts.get(key)+"]");
+            for(Map.Entry<String,Integer> key: sortByValue(wordCounts)){
+                System.out.println(key.getKey()+"="+key.getValue());
             }
         }
-
-        for (String word : wordCounts.keySet()) {
-            System.out.println(word + " = " + wordCounts.get(word));
-        }
-
+        
         input.close();
     }
 
     public static void addWord(String word, Map<String, Integer> wordMap) {
         Integer value = wordMap.get(word);
         if (value == null) {
-            wordMap.put(word.toLowerCase(), 1);
+            wordMap.put(word, 1);
         } else {
             value++;
-            wordMap.put(word.toLowerCase(), value);
+            wordMap.put(word, value);
         }
 
     }
-    List<String> sortByKey(Map<String,Integer> map){
-        List<String> listOfKeys = new ArrayList<>(map.keySet());
-        Collections.sort(listOfKeys);
+    List<Map.Entry<String ,Integer>> sortByValue(Map<String,Integer> map){
+        List<Map.Entry<String ,Integer>> listOfKeys = new ArrayList<>(map.entrySet());
+        listOfKeys.sort(Map.Entry.comparingByValue());
         return listOfKeys;
     }
 
