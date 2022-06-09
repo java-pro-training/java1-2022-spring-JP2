@@ -7,21 +7,18 @@ public class WordCounterName {
         run();
     }
 
-
-    static Map<String, Integer> wordCounts = new HashMap<>();
-
     public static void run() {
+        Map<String, Integer> wordCounts = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
        while (true) {
-            System.out.println("Please enter line of words or type quit:");
-            String line = scanner.nextLine().toLowerCase();
+           System.out.println("Please enter line of words or type quit:");
+           String line = scanner.nextLine().toLowerCase();
             if (line.contains("quit")) break;
             for (String currentWord : line.split(" ")) {//if "" - split to string character, if " " - split to words
                 addWord(currentWord, wordCounts);
             }
-            sortTheArray();
-//            printResult();
-            wordCounts.clear();//array has to clear, because second input contains old words
+           sortTheArray(wordCounts);
+           wordCounts.clear();//array has to clear, because second input contains old words
         }
         scanner.close();
     }
@@ -36,18 +33,14 @@ public class WordCounterName {
         }
     }
 
-    private static void printResult() {
-        int i = 1;
-        for (String word : wordCounts.keySet()) {
-            System.out.println(i + " word '" + word + "' was " + wordCounts.get(word) + " times");
-            i++;
-        }
-    }
-
-    private static void sortTheArray() {
-        ArrayList<Map.Entry<String, Integer>> sortedArray = new ArrayList<>(wordCounts.entrySet());
+    private static void sortTheArray(Map<String, Integer> arrayToSort) {
+        List<Map.Entry<String, Integer>> sortedArray = new ArrayList<>(arrayToSort.entrySet());
         sortedArray.sort(Map.Entry.comparingByValue());
         Collections.reverse(sortedArray);
+        printResult(sortedArray);
+    }
+
+    private static void printResult(List<Map.Entry<String, Integer>> sortedArray) {
         int i = 1;
         for (Map.Entry<String, Integer> entry : sortedArray) {
             System.out.println(i + " word '" + entry.getKey() + "' was " + entry.getValue() + " times");
