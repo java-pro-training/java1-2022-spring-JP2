@@ -26,4 +26,10 @@ public class User {
         return age;
 
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\r\n" + "Surname: " + getSurname() + "\r\n" + "Age: " + getAge();
+
+    }
 }

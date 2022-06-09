@@ -32,6 +32,4 @@ public class UserValidator {
         return age < MIN_AGE || age > MAX_AGE;
     }
 
-
-
 }
