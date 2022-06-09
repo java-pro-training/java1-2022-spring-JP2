@@ -1,5 +1,7 @@
 package lv.lu.training.lesson7;
 
+import java.util.Arrays;
+
 public class ArrayUtilsTest {
     public static void main(String[] args) {
         int[] result = ArrayUtils.reverse(new int[]{1,2,3});
