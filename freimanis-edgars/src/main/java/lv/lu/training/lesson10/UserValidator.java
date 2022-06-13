@@ -20,7 +20,7 @@ public class UserValidator {
 
     private void validate(String name, String surname, int age) {
 
-        if (ageCheck(User.getAge())) {
+        if (ageCheck(User.getAge())) { //neiet!!
             throw new User.ValidationException("Age must be within human possibility : 0 - 120");
         }
    }
