@@ -38,10 +38,9 @@ public class TextAnalysisMain {
     }
 
     private static String lowercasedWithoutWhitespaces(String text) {
-        String modifiedText = text.replaceAll(" ", "")
+        return text.replaceAll(" ", "")
                 .replaceAll("\\n", "")
                 .toLowerCase();
-        return modifiedText;
     }
 
     private static String keyOf(char character) {
