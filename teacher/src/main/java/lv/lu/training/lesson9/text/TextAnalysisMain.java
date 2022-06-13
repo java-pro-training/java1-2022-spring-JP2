@@ -10,7 +10,7 @@ public class TextAnalysisMain {
         print(analysisList);
     }
 
-    private static List<Map.Entry<String, Integer>> sortAndReverseResults(Map<String, Integer> analysis) {
+   private static List<Map.Entry<String, Integer>> sortAndReverseResults(Map<String, Integer> analysis) {
         List<Map.Entry<String, Integer>> analysisList = new ArrayList<>(analysis.entrySet());
         analysisList.sort(Map.Entry.comparingByValue());
         Collections.reverse(analysisList);
