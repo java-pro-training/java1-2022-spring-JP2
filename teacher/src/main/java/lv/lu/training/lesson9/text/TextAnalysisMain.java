@@ -10,7 +10,7 @@ public class TextAnalysisMain {
         print(analysisList);
     }
 
-    private static List<Map.Entry<String, Integer>> sortAndReverseResults(Map<String, Integer> analysis) {
+   private static List<Map.Entry<String, Integer>> sortAndReverseResults(Map<String, Integer> analysis) {
         List<Map.Entry<String, Integer>> analysisList = new ArrayList<>(analysis.entrySet());
         analysisList.sort(Map.Entry.comparingByValue());
         Collections.reverse(analysisList);
@@ -38,10 +38,9 @@ public class TextAnalysisMain {
     }
 
     private static String lowercasedWithoutWhitespaces(String text) {
-        String modifiedText = text.replaceAll(" ", "")
+        return text.replaceAll(" ", "")
                 .replaceAll("\\n", "")
                 .toLowerCase();
-        return modifiedText;
     }
 
     private static String keyOf(char character) {
