@@ -17,7 +17,8 @@ public class WordCounterName {
             for (String currentWord : line.split(" ")) {//if "" - split to string character, if " " - split to words
                 addWord(currentWord, wordCounts);
             }
-           sortTheArray(wordCounts);
+           var result = sortTheArray(wordCounts);
+            printResult(result);
            wordCounts.clear();//array has to clear, because second input contains old words
         }
         scanner.close();
@@ -33,11 +34,11 @@ public class WordCounterName {
         }
     }
 
-    private static void sortTheArray(Map<String, Integer> arrayToSort) {
+    private static List<Map.Entry<String, Integer>> sortTheArray(Map<String, Integer> arrayToSort) {
         List<Map.Entry<String, Integer>> sortedArray = new ArrayList<>(arrayToSort.entrySet());
         sortedArray.sort(Map.Entry.comparingByValue());
         Collections.reverse(sortedArray);
-        printResult(sortedArray);
+        return sortedArray;
     }
 
     private static void printResult(List<Map.Entry<String, Integer>> sortedArray) {
