@@ -16,17 +16,6 @@ public class User {
 
     }
 
-    public User(String name){
-        this.name = name;
-    }
-
-    public User(int age){
-        this.age=age;
-    }
-
-    public String getName() { return name;}
-    public String getSurname() { return surname;}
-    public int getAge() { return age;}
     public String getUser (){
         return name + " " + surname +", Age: "+age;
     }
