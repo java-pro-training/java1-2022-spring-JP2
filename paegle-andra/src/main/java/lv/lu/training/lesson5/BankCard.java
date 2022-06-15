@@ -13,7 +13,7 @@ import java.time.LocalDate;
         private double balance;
 
         public BankCard(String bankName, String origin, String holderName, String number,
-                        LocalDate expiryDate, String cvv, double balance) {
+                        LocalDate expiryDate, String cvv){
             this.bankName = bankName;
             this.origin = origin;
             this.holderName = holderName;
@@ -23,30 +23,36 @@ import java.time.LocalDate;
             this.balance = 0;
         }
 
-        public BankCard(String swedbank, String master, String andra_paegle, String number, LocalDate of, String cvv) {
-        }
-
         public void withdraw(double value) {
             this.balance -= value;
+            System.out.println("Nauda izņemta");
         }
 
         public void addFunds(double value) {
             this.balance += value;
+            System.out.println("Nauda ieskaitīta");
+        }
+        public double getBalance(){
+            return balance;
         }
 
-        @Override
-        public String toString() {
-            return "BankCard{" + "bankName='" + bankName + "' " +
-                    ", origin='" + origin + "' " +
-                    ", holderName='" + holderName + "' " +
-                    ", number='" + number + "' " +
-                    ", expiryDate=" + expiryDate +
+
+    @Override
+    public String toString () {
+            return "bankCard{" +
+                    "Bankas nosaukums='" + bankName + "' " +
+                    ",Kartes veids='" + origin + "' " +
+                    ", Kartes turētājs='" + holderName + "' " +
+                    ", Kartes numurs='" + number + "' " +
+                    ", Derīga līdz=" + expiryDate +
                     ", cvv='" + cvv + "' " +
-                    ", balance=" + balance +
+                    ", Konta bilance=" + balance +
                     '}';
-
-
         }
-    }
+
+
+}
+
+
 
 
