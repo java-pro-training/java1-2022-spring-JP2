@@ -27,7 +27,7 @@ public class HourlyEmployee extends Employee {
         return hoursWorked * payRate;
     }
 
-    @Override
+     @Override
     public String toString() {
         return "HourlyEmployee{" +
                 "firstName='" + firstName + '\'' +
