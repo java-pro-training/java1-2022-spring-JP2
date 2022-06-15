@@ -26,6 +26,9 @@ public class UserCreatorConsole {
                 " Max age is 120 years");
         System.out.print("Please, enter name: ");
         String word = scanner.next();
+        if (word.equals("quit")){
+            throw new Quit("End of programme");
+        }
         user.setName(toGetConvertedWord(word));
 
         System.out.print("Please, enter surname: ");
