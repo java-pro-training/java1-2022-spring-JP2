@@ -1,4 +1,4 @@
-package lv.lu.training.lesson10;
+package lv.lu.training.lesson10.PirmaisUzdevums;
 
 public class UserValidator {
     private static final int MIN_TEXT_LENGTH = 3;
@@ -13,7 +13,11 @@ public class UserValidator {
         if (ageCheck(user.getAge())){
             throw new ValidationException("Age must be within human possibility : 0 - 120");
         }else{
-            System.out.println(user.getUser());
+            System.out.print(" - viss ievadīts korekti: ");
+            System.out.print(user.getName() + " ");
+            System.out.print(user.getSurname() + " ");
+            System.out.print(user.getAge() + " ");
+
         }
 
     }

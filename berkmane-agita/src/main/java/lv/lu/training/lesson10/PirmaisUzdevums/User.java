@@ -1,4 +1,4 @@
-package lv.lu.training.lesson10;
+package lv.lu.training.lesson10.PirmaisUzdevums;
 
 public class User {
     private final String name;
