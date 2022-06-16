@@ -1,5 +1,6 @@
 package lv.lu.training.lesson10.PirmaisUzdevums;
 
+
 public class UserCreator {
     public static void main(String[] args) {
         UserValidator validator = new UserValidator();

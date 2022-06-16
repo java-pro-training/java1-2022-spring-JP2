@@ -1,5 +1,6 @@
 package lv.lu.training.lesson10.PirmaisUzdevums;
 
+
 public class UserValidator {
     private static final int MIN_TEXT_LENGTH = 3;
     private static final int MAX_TEXT_LENGTH = 15;
