@@ -1,6 +1,8 @@
 package lv.lu.training.darupati.DeviitaaLekcija;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ListExample {
     public static void main (String[] args) {
@@ -28,12 +30,13 @@ public class ListExample {
 
         //sarakstu jeb kolekciju var defināt arī šādi, Tā sanāk īsāk.
 
-        List<String> kraasas = List.of("Zaļš", "Zils", "Rozā");
-         kraasas.add (2,"melns");
+        //List<String> kraasas = List.of();
+        List<String > kraasas = new ArrayList<>(List.of("Zaļš", "Zils", "Rozā"));
 
         for (String konkretaKraasa : kraasas){
             System.out.println(konkretaKraasa);
         }
+
 
 
     }
