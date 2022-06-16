@@ -16,12 +16,12 @@ public class WordCounter {
 
     public static void main (String [] args) {
             String input= inputText.Text ;
-        List <String> inputList=new ArrayList<String>();
+        List <String> inputList= new ArrayList<>();
         inputList=Arrays.asList(input.split(" "));
         int size = inputList.size();
 
-        int i =0;
-        Map <String, Integer> duplicateCount = new HashMap<String, Integer>();
+        int i;
+        Map <String, Integer> duplicateCount = new HashMap<>();
         for (int j=0; size>j; j++){
             int count = 0;
             for (i=0; size >i;i++){
