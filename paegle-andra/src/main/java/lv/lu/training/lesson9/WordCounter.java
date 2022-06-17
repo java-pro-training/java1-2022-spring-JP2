@@ -25,7 +25,7 @@ public class WordCounter {
         }
     }
 
-    private static void addWord(String word, Map<String, Integer> wordCounts) {
+    static void addWord(String word, Map<String, Integer> wordCounts) {
         wordCounts.put(word,incrementCounter(word, wordCounts));
     }
 
