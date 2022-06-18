@@ -49,3 +49,4 @@ public class BankCard { //kartei izveido privātus datus
                 '}';
     }
 }
+
