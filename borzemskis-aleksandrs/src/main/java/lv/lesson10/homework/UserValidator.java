@@ -10,23 +10,26 @@ public class UserValidator {
     private static final int MIN_AGE = 0;
     private static final int MAX_AGE = 120;
 
-    void validate(User user) {
-        if (hasInvalidLength(user.getName()) || hasInvalidLength(user.getName())) {
+    public void validate(User user) {
+        if (hasInvalidLength(user.getName())) {
             throw new ValidationException("Name has to be 3 to 15 characters long");
-        }else if(hasInvalidLength(user.getSurname()) || hasInvalidLength(user.getSurname())) {
+        } else if (hasInvalidLength(user.getSurname())) {
             throw new ValidationException("Surname has to be 3 to 15 characters long");
-        }else if (ageCheck(user.getAge())) {
+        } else if (ageCheck(user.getAge())) {
             throw new ValidationException("Age must be within human possibility : 0 - 120");
         }
     }
-    private boolean hasInvalidLength(String text) {
+
+    public boolean hasInvalidLength(String text) {
         return text.length() < MIN_TEXT_LENGTH || text.length() > MAX_TEXT_LENGTH;
     }
-    private boolean ageCheck(int age) {
+
+    public boolean ageCheck(int age) {
         return age < MIN_AGE || age > MAX_AGE;
     }
+
     //---A method to input integer number
-     int isInputNumberIsInteger(){
+    int isInputNumberIsInteger() {
         boolean tryIntInput;
         do {
             tryIntInput = false;

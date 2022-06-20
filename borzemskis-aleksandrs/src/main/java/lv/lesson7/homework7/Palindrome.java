@@ -22,7 +22,7 @@ public class Palindrome {
         //A method to convert string array to string word
         String word = "";
         for (String s : array) {
-            word += s.toLowerCase();
+            word += s;
         }
         return word;
     }
