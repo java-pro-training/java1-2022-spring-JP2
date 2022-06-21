@@ -10,6 +10,8 @@ public class BankAccount {
 
 
     public String getUserPin(){return userPin;}
+    public double getUserBalance(){return userBalance;}
+    public double getUsedCredit(){return usedCredit;}
 
     public boolean isEnoughMoney(int value) {
         enoughMoney = (userBalance + userCredit - usedCredit - value) >= 0;
@@ -74,6 +76,7 @@ public class BankAccount {
     public String toString() {
         return "Konts numurs:" + userAccount +
                 "\nDebeta bilance = " + userBalance +
+
                 "\nKredita limits = " + userCredit +
                 "\nIzmantots kredits = " + usedCredit;
     }
