@@ -17,6 +17,18 @@ public class UserMainTest {
 
     }
 
+    @Test
+    public void shouldNotThrowValidation() {
+        Executable executable = new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                userValidator.validateAge(25);
+            }
+        };
+
+        Assertions.assertDoesNotThrow(executable);
+    }
+
 
     @Test
     public void shouldThrowValidationExceptionAgeTooOld(){
