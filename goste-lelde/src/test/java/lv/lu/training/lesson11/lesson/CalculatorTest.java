@@ -82,8 +82,9 @@ class CalculatorTest {
         Assertions.assertTrue(calculator.isOddNumber(1));
     }
 
+    @Test
     public void shouldVerifyNumberIsNotOdd(){
-        Assertions.assertFalse(calculator.isOddNumber(1));
+        Assertions.assertFalse(calculator.isOddNumber(2));
     }
 
     @Test
